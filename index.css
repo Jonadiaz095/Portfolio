@@ -1,0 +1,297 @@
+body{
+    
+    width: 100%;
+    margin: 0%; padding: 0%;
+    
+}
+header{
+    background-color:#808080ca;
+    border-bottom-style:groove;
+    position: fixed;
+    width: 100%;
+}
+.header{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    word-spacing: 7px;
+    text-align: right;
+    margin-right: 15px;
+    
+}
+.header a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    
+}
+.header a:hover{
+    color: #282826ed;
+    font-size: 17px;
+}
+main{
+    display: grid; height: 100vh;
+    grid-template-areas:
+    "logo"
+    "presentacion"
+    "barra"
+    "footer"
+    ;
+}
+.logo{
+    grid-area: logo;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    background-image: url(img/fondoarriba.png);   
+    border-bottom-style:groove;
+}
+.logo img{
+    justify-content: center;
+    width: 350px;
+    opacity: 0.4;
+    
+}
+.presentacion{
+    grid-area: presentacion;
+    width: 100%;
+    display: grid;    
+    grid-template-areas:
+    "fotos titulos titulos titulos"
+    "fotos parrafos parrafos parrafos";
+}
+.foto{
+    grid-area: fotos;
+    
+    height: 100%;
+    width: 100%;
+}
+.titulo{
+    grid-area: titulos;
+    
+    
+}
+.parrafo{
+    grid-area: parrafos;
+    margin-top: 50px;
+    
+}
+p.mi::first-letter{
+    font-size: 2rem;
+}
+img.yo{
+    border-radius: 20%;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.6);
+    max-width: 200px; max-height: 200px;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+h1{
+    font-family: monospace;
+    color:#343029;
+    position: absolute; 
+	float: left;
+	font-size: 2.5em;
+    margin-top: 3rem;
+    
+    
+   
+}
+h1 span {
+    position:absolute;
+    right:0;
+    width:0;
+    background: rgb(255, 255, 255);
+    border-left: 1px solid #000;
+    animation: escribir 5s steps(24) none alternate;
+}
+
+@keyframes escribir {
+    from { width: 100% }
+    to { width:0 }
+}
+p{
+    font-size: 1rem;
+    color: #000000;
+       
+}
+.descarga{
+    text-align: center;   
+    
+}
+.btn-secondary{
+    display: inline-block;
+    text-align: center;
+
+}
+.sobreMi{
+    background-color: #899806a2;
+    border-top-style:outset;
+    border-bottom-style:inset;
+    text-indent: 2rem; 
+}
+
+h2{
+   text-align: center;
+   font-family: 'Titillium Web', sans-serif;
+    font-size: 30px;
+    color: #000000;
+    text-transform: uppercase;
+}
+.proyecto{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button{
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-top-style: groove;
+    border-bottom-style: groove;
+    
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px 10px 10px 10px;
+}
+.proyecto .button img{
+    border-radius: 5%;
+    border-style:groove;
+    margin: 5px;
+    width: 289px;
+    height: 175px;
+   
+}
+
+.proyecto .button img:hover{
+    width: 299px;
+    height: 185px;
+    border-style: double;
+
+}
+p.mi{
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.contacto a i{
+    margin: 5px;
+    font-size: 80px;
+    color: #000000;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 150px;
+    margin-top: 50px;
+}
+.contacto a i:hover{
+    color: #343029;
+    font-size: 90px;
+}
+.contacto{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #899806a2;
+    border-top-style:outset;
+}
+footer .fondo{
+    left: 0; bottom: 0; height: 32px; width: 100%;
+    position: fixed;
+    background-color:#808080ca;
+    text-align: right;
+    border-top-style:inset;
+}
+footer .fondo a{
+    font-size: 25px;
+    color:#ffffff;
+    letter-spacing: 10px;
+    margin-top: 2.5px;
+}
+footer .fondo a:hover{
+    font-size: 26px;
+    color: #282826ed;
+}
+@media screen and (max-width:680px){
+    .header a{
+        font-size: 0.8rem;        
+    }
+    .header{
+        text-align: center;
+    }
+    .contact{
+        display: none;
+    }
+    .presentacion{
+        display: grid; height: 250px;
+        grid-template-areas:
+        "titulos titulos titulos titulos"
+        "fotos parrafos parrafos parrafos"
+        "fotos parrafos parrafos parrafos";
+        
+    }
+    .titulo{
+        width: 100%;
+        height: 40px;  
+    }
+    .foto{
+        height: 200px;
+    }
+    h1{
+        font-size: 20px;
+        margin-top: 10px;
+        position: relative;
+        text-align: center;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    img.yo{
+        width: 80%;
+        margin-left: 10px;
+    }
+   
+    .parrafo{
+        margin-top: 20px;
+        width: 80%;    
+        height: 200px;     
+    }
+    .proyecto .button img{
+        width: 239px;
+        height: 125px;
+       
+    }
+    
+    .proyecto .button img:hover{
+        width: 249px;
+        height: 135px;
+    
+    }
+    .button{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        
+    }
+    .contacto a i{
+        font-size: 3rem;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 80px;
+        margin-top: 10px;
+    }
+    .contacto a i:hover{
+        color: #343029;
+        font-size: 3.5rem;
+    }
+
+}
